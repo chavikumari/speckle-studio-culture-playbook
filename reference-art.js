@@ -1,0 +1,8 @@
+// Reference-led editorial motifs, kept together in one shared illustration sheet.
+export function editorialArt(kind,cls=''){
+ const crops={letter:[0,0,832,512],clock:[832,0,704,512],look:[0,512,800,512],people:[800,512,736,512]};
+ const [x,y,w,h]=crops[kind]||crops.letter;
+ return `<span class="ref-art ref-${kind} ${cls}" aria-hidden="true" style="--art-ratio:${w}/${h}"><svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="xMidYMid meet"><svg width="${w}" height="${h}" viewBox="${x} ${y} ${w} ${h}" overflow="hidden"><image href="./assets/editorial-flat-sheet.png" width="1536" height="1024"/></svg></svg></span>`;
+}
+export function laptopArt(){return `<div class="desk-laptop" aria-hidden="true"><div class="laptop-screen"><span class="laptop-browser"><i></i><i></i><i></i><b>speckle.studio</b></span><span class="laptop-folder folder-one"></span><span class="laptop-folder folder-two"></span><span class="laptop-wave">✳</span><span class="laptop-message">GOOD IDEAS<br>TRAVEL.</span><span class="laptop-cursor">↖</span></div><div class="laptop-base"><span class="laptop-keys">${'<i></i>'.repeat(30)}</span><i class="laptop-trackpad"></i></div></div>`;}
+export function deskCup(){return `<svg viewBox="0 0 180 180" aria-hidden="true"><g stroke="#5F130D" stroke-width="1.6" fill="none"><circle cx="82" cy="95" r="61" fill="#FFDED4"/><circle cx="82" cy="95" r="46" fill="#F3EFD0"/><path d="M121 75q46-8 31 24-7 12-26 11" stroke-width="9"/><circle cx="82" cy="95" r="34" fill="#5F130D"/><path d="M78 78q27-2 18 23-9 21-31 6" stroke="#F3EFD0" stroke-width="2"/><path d="M68 19q-14 12 0 24m20-33q-14 12 0 25"/></g></svg>`;}
